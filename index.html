@@ -1,312 +1,674 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Pawans Portfolio</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pawan's Website</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <!-- MathJax -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+        <!-- Custom CSS -->
+        <style>
+            :root {
+                --dark: #3c2f2f;
+                --red: #854442;
+                --coffee: #6f4436;
+                --mocha: #be9b7b;
+                --beige: #faf0dc;
+                --milk: #fffdf6;
+            }
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+            body {
+                font-family:
+                    "Times New Roman",
+                    -apple-system,
+                    "Segoe UI",
+                    sans-serif;
+                background-color: var(--beige);
+                color: var(--dark);
+            }
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+            h1,
+            h2,
+            h3,
+            .special-heading {
+                color: var(--red);
+            }
 
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+            a {
+                color: var(--red);
+            }
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+            a:hover {
+                color: var(--coffee);
+            }
 
-	</head>
-	<body>
-	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Pawan Jayakumar</a></h1>
-				<span class="position"><a href="#">MS CS @ UCSD</a></span></span>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
-					<ul>
-						<!-- <li class="active"><a href="#" data-nav-section="home">Home</a></li> -->
-						<!-- <li><a href="#" data-nav-section="about">About</a></li> -->
-						<!-- <li><a href="#" data-nav-section="experience">Experience</a></li> -->
-						<li><a href="#" data-nav-section="projects">Projects</a></li>
-						<!-- <li><a href="#" data-nav-section="research">Research</a></li> -->
-						<li><a href="#" data-nav-section="socials">Socials</a></li>
-					</ul>
-				</div>
-			</nav>  
+            .navbar {
+                background-color: var(--mocha) !important;
+                font-size: 20px;
+            }
 
-		</aside>
+            .navbar-brand {
+                color: var(--dark) !important;
+                font-weight: bold;
+            }
 
-		<div id="colorlib-main">
-			<section class="colorlib-work" data-section="projects">
-				<div class="colorlib-narrow-content">
-					<div class="row" style="background-image: url(images/lightgradient.jpg);">
-						<br>
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<h2 class="colorlib-heading animate-box">Projects</h2>
-						</div>
-					</div>
-					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-						<div class="col-md-12">
-							<br>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/tokenizer.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="blogposts/TempDS.pdf"_blank">Improving byte level transformers with temporal down sampling</a></h3>
-										<span>Research</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/telescope.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="blogposts/UCB_go_explore.pdf" target="_blank">Improving Go Explore with UCB Cell selection</a></h3>
-										<span>Research</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/morl.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/JayakumarPawan/SensorMultiObjectiveOpt" target="_blank">Multi-Objective Sensor Usage Optimization</a></h3>
-										<span>Research</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/slider.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://store.steampowered.com/app/1916890/Slider/" target="_blank">Slider</a></h3>
-										<span>Video Game based on the 8 puzzle developed in Unity</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="project" style="background-image: url(images/flappy.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/JayakumarPawan/FlappyBird/tree/master" target="_blank">Flappy Bird</a></h3>
-										<span>Classic Game replica written in Processing 3</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-							<div class="project" style="background-image: url(images/shorts.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/HoYeonJ/Content-Recommender-System-Simulation-" target="_blank">Multi Creator Content Reccomendation Simulation</a></h3>
-										<span>Research</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-							<div class="project" style="background-image: url(images/crowdsource.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/JayakumarPawan/CrowdGan" target="_blank">Crowd Sourced Data Classifications</a></h3>
-										<span>Research</span>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<br>
-					</div>
-				</div>
-			</section>
+            .nav-link {
+                color: var(--dark) !important;
+            }
 
-			<!-- <section class="colorlib-blog" data-section="research">
-				<div class="colorlib-narrow-content">
-					<div class="row" style="background-image: url(images/lightgradient.jpg);">
-						<br>
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Read</span>
-							<h2 class="colorlib-heading">Recent Blog</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="blog.html" class="blog-img"><img src="images/slider.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
-									<h3><a href="blog.html">Renovating National Gallery</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="blog-entry">
-								<a href="blog.html" class="blog-img"><img src="images/blog-2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
-									<h3><a href="blog.html">Wordpress for a Beginner</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="blog.html" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
-									<h3><a href="blog.html">Make website from scratch</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
-						</div>
-					</div>
-				</div>
-			</section> -->
+            .nav-link:hover {
+                background: var(--beige) !important;
+            }
 
-			<section class="colorlib-contact" data-section="socials">
-				<div class="colorlib-narrow-content">
-					<div class="row" style="background-image: url(images/lightgradient.jpg);">
-						<br>
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<h2 class="colorlib-heading">Contact</h2>
-						</div>
-					</div>
-					<div class="row">
-						<br>
-						<br>
-						<div class="col-md-5">
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-github"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="https://github.com/JayakumarPawan" target="_blank">Github</a></p>
-								</div>
-							</div>
+            .nav-link.active {
+                border-bottom: 2px solid var(--coffee);
+            }
 
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-mail"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a>pjayakumar@ucsd.edu</a></p>
-								</div>
-							</div>
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">	
-									<i class="icon-paper"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="images/Pawan_Resume.pdf" target="_blank"> Resume </a></p>
-								</div>
-							</div>
-							<p class="text-center"></p>
-						</div>
-						<!-- <div class="col-md-7 col-md-push-1">
-							<div class="row">
-								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
-										</div>
-										<div class="form-group">
-											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-										</div>
-										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
-										</div>
-									</form>
-								</div>
-								
-							</div>
-						</div> -->
-					</div>
-				</div>
-			</section>
+            .content-section {
+                background: var(--beige);
+                display: none;
+            }
 
-		</div><!-- end:colorlib-main -->
-	</div><!-- end:container-wrap -->
-	</div><!-- end:colorlib-page -->
+            .content-section.active {
+                display: block;
+            }
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-	
-	
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
+            .blog-card {
+                transition: transform 0.2s;
+                background: var(--milk);
+            }
 
-	</body>
+            .blog-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .blog-post {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .post-content {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .back-to-blog {
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+        >
+            <div class="container">
+                <a class="navbar-brand" href="#">Pawan Jayakumar</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                href="#"
+                                class="nav-link active"
+                                data-section="home"
+                                >Home</a
+                            >
+                        </li>
+                        <!-- in the works... -->
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-link" data-section="research"
+                                >Research</a
+                            >
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-section="blog"
+                                >Blog</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content Container -->
+        <div id="page-content">
+            <!-- Home Page Content -->
+            <div
+                id="home"
+                class="content-section py-5 active"
+                style="display: block"
+            >
+                <div class="container">
+                    <div class="row align-items-center py-5">
+                        <!-- left doodles -->
+                        <div class="col-lg-2"></div>
+                        <!-- Main content -->
+                        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                            <div class="row align-items-center">
+                                <!-- Links and photo -->
+                                <div class="col-3">
+                                    <img
+                                        src="images/about.jpg"
+                                        alt="Researcher Photo"
+                                        class="img-fluid rounded-square shadow-sm"
+                                        style="width: 100%"
+                                    />
+                                    <span style="font-size: 20px"
+                                        >pjayakumar@ucsd.edu</span
+                                    >
+                                    <div
+                                        style="
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                                        "
+                                    >
+                                        <a
+                                            href="https://github.com/vayuda"
+                                            target="_blank"
+                                        >
+                                            <img
+                                                src="images/github-mark.png"
+                                                alt="GitHub"
+                                                class="img-fluid"
+                                                style="width: 20px"
+                                            />
+                                        </a>
+                                        <a
+                                            href="https://x.com/Cr1msonAura"
+                                            target="_blank"
+                                        >
+                                            <img
+                                                src="images/xlogo-black.png"
+                                                alt="GitHub"
+                                                class="img-fluid"
+                                                style="width: 20px"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Personal info -->
+                                <div class="col">
+                                    <div class="row">
+                                        <p
+                                            class="mb-4"
+                                            style="font-size: 1.24rem"
+                                        >
+                                            As a computer science master's
+                                            student at UCSD, I spend a lot of
+                                            time thinking about how we explore
+                                            and discover new things, both in
+                                            research and in life. This blog is
+                                            an extension of that exploration, a
+                                            place where I share my thoughts on
+                                            everything from art and sports to
+                                            history, philosophy, and of course,
+                                            science.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <!-- right doodles -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Page Content -->
+            <div id="blog" class="content-section py-5">
+                <!-- Blog Preview Section -->
+                <div id="blog-previews" class="container">
+                    <h2 style="color: var(--dark)" class="display-4 mb-4">
+                        Posts
+                    </h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card blog-card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h3 style="color: var(--red)" class="h4">
+                                        Is Japanese Food Overrated: the Role of
+                                        Ingredient Selection in a dish
+                                    </h3>
+                                    <p class="text-muted">
+                                        Posted on January 7, 2025
+                                    </p>
+                                    <p>
+                                        As I was browsing ML twitter, I came
+                                        across Zhendong's 2024 year in review...
+                                    </p>
+                                    <button
+                                        class="btn btn-outline-primary btn-sm read-more-btn"
+                                        data-post-id="japanese-food"
+                                    >
+                                        Read More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Individual Blog Post Sections -->
+                <div id="blog-posts" class="container" style="display: none">
+                    <!-- Japanese Food Post -->
+                    <div
+                        id="post-japanese-food"
+                        class="blog-post"
+                        style="display: none color: var(--milk)"
+                    >
+                        <button
+                            class="btn btn-outline-secondary mb-4 back-to-blog"
+                        >
+                            ← Back to Posts
+                        </button>
+                        <h2 class="mb-3">
+                            Is Japanese Food Overrated: the Role of Ingredient
+                            Selection in a dish
+                        </h2>
+                        <p class="text-muted">
+                            Last updated on January 8, 2025
+                        </p>
+                        <div class="post-content">
+                            <!-- Full post content goes here -->
+                            <p>
+                                As I was browsing ML twitter, I came across
+                                Zhendong's 2024 year in review. Initially drawn
+                                to the section about model evaluations, I found
+                                myself fixated not on the evaluations but on a
+                                bold claim about Japanese cuisine:
+                            </p>
+                            <blockquote>
+                                <p>
+                                    This is a more general point that people may
+                                    have made their minds up on already. People
+                                    go to Japan to eat the absolute best quality
+                                    of certain ingredients, accepting that
+                                    they’re giving up on the diversity of
+                                    produce and flavors from China and Taiwan.
+                                    In that case, I’ll make a stronger claim:
+                                    except for sushi, every single dish in
+                                    Japanese cuisine is done better by another
+                                    Asian cuisine: jiaozi over gyoza, pakora
+                                    over tempura, pho over ramen, mul naengmyeon
+                                    over soba, hot pot over shabu shabu, Indian
+                                    curries over Japanese, and Korean barbecue
+                                    over yakiniku (except wagyu). When I
+                                    workshopped this theory I heard a feeble
+                                    defense raising okonomiyaki. I did have to
+                                    think, but jianbing and bánh xèo still win.
+                                    Unless you plan on eating sushi every day (I
+                                    would), choose Taiwan.
+                                </p>
+                            </blockquote>
+                            <p>
+                                This struck a chord because I've always felt
+                                that Japanese food enjoys absurd levels of
+                                popularity relative to other Asian cuisines.
+                                That said, I do think his opinion is overly
+                                strong. He overlooked udon (chewy noodles) and
+                                katsu (breaded meat cutlets) as both of these
+                                don't really have an alternative in another
+                                Asian cuisine. Also, claiming pho is
+                                categorically better than ramen seems reductive
+                                given the wide variation there is in both. I
+                                consulted with a few friends about what they
+                                made of Zhendong's stance left with a much
+                                better understanding of the role of ingredient
+                                usage in culinary philosophy.
+                            </p>
+                            <h3 id="understanding-japanese-cuisine">
+                                Understanding Japanese cuisine
+                            </h3>
+                            <p>
+                                To some extent, I agree with Zhendong's first
+                                point: Japanese cuisine emphasizes maximizing
+                                the quality and flavor from a select few
+                                ingredients at the expense of variety. This
+                                could be explained geographically: Japan is a
+                                mountainous archipelago far removed from the
+                                equator where most of the land is not suitable
+                                for agriculture which means there really isn’t a
+                                lot of room for growing a diverse array of
+                                vegetables. From a traveler's perspective
+                                though, there is most certainly enough diversity
+                                to last through the short time you visit.
+                            </p>
+                            <h3 id="the-advantage-of-specificity">
+                                The advantage of specificity
+                            </h3>
+                            <p>
+                                Japanese cuisine's characteristic focus on
+                                ingredient quality mean that even basic dishes
+                                are delicious. Nowhere is this more evident than
+                                in Japan's convenience stores, which have earned
+                                international acclaim for their food quality.
+                                Instead of dedicating extensive time to seeking
+                                out high-end restaurants, travelers can
+                                confidently grab meals to-go before heading off
+                                to explore. Local citizens can also appreciate
+                                this convenience because Japanese work culture
+                                is known to be quite brutal and people may not
+                                have the energy to cook something when they get
+                                back home.
+                            </p>
+                            <p>
+                                This high baseline quality runs deeper than
+                                convenience. By focusing on a few key
+                                ingredients, Japanese chefs can achieve
+                                extraordinary mastery. Critics and casual diners
+                                alike can appreciate the requisite skill to
+                                create raw seafood dishes such as sashimi.
+                                There's no need to explain about the
+                                technicalities of a bain-marie to impress them.
+                                Watching a chef assemble sushi in front of you
+                                adds a unique visual and experiential appeal.
+                                While it still isn't one of my favorite foods, I
+                                can understand why so many people love it.
+                            </p>
+                            <h3 id="cuisines-don-t-exist-in-a-vacuum">
+                                Cuisines don't exist in a vacuum
+                            </h3>
+                            <p>
+                                It would also be misleading to suggest that this
+                                focus on a few ingredients results in a limited
+                                palate. Regional trade networks have led to
+                                Japan's adaptation of spicy elements from its
+                                Asian neighbors. Tantanmen, which incorporates
+                                the same doubanjiang (chili bean paste) found in
+                                Sichuan's mapo tofu, demonstrates how Japanese
+                                cuisine has thoughtfully integrated external
+                                influences while maintaining its distinctive
+                                character. I won't claim that these offshoots
+                                are strictly better than their asian counter
+                                parts, but they do offer a solution for those
+                                who grow tired of the standard Japanese options.
+                                Or you could just eat at mcdonalds 🙂
+                            </p>
+                            <h3 id="ingredient-selection">
+                                Ingredient selection
+                            </h3>
+                            <p>
+                                Understanding the strengths of Japanese cuisine
+                                prompted me to reflect on ingredient selection.
+                                I previously mentioned the dubiousness of
+                                comparing ramen to pho. While both are noodle
+                                soups, this broad categorization obscures
+                                significant differences. Ramen noodles,
+                                typically made from wheat, are designed to be
+                                firm and chewy (al dente), providing a
+                                satisfying bite and holding up well in rich
+                                broths. Pho noodles, made from rice flour, are
+                                softer and more delicate, complementing the
+                                lighter, more aromatic broth. This difference in
+                                texture alone significantly alters the eating
+                                experience. This difference is only exacerbated
+                                when considering the broth and toppings as well.
+                                Throughout the rest of this post, I explore a
+                                few more examples of how the intention (or lack
+                                thereof) behind ingredient selection makes or
+                                breaks a dish.
+                            </p>
+                            <h3 id="mozzarella-in-korean-food">
+                                Mozzarella in Korean Food
+                            </h3>
+                            <p>
+                                There has been a recent trend of adding
+                                mozzarella cheese to dishes like tteokbokki
+                                (rice cakes), dakgalbi (spicy chicken), and even
+                                traditional stews. While some combinations like
+                                cheese + buldak (fire chicken) have become
+                                popular, others are feel much more forced.
+                            </p>
+                            <p>
+                                With thousands of cheese varieties available,
+                                mozzarella is rarely the optimal choice. Yet,
+                                its stretchy texture often wins out, catering to
+                                visual appeal over nuanced flavor. One of my
+                                friends who visited Korea recently describes his
+                                grievances: a perfectly seasoned grilled chicken
+                                has absolutely no need for such a bland
+                                accompaniment that doesn't even stick properly
+                                to the chicken anyway. In my opinion, you
+                                shouldn't prioritize theatrical gimmicks over
+                                substance: leave the cheese pulls for dishes
+                                like pizza.
+                            </p>
+                            <h3 id="-caviar-on-truffle-mentality">
+                                &quot;Caviar on Truffle&quot; Mentality
+                            </h3>
+                            <p>
+                                The thoughtless addition of luxury ingredients
+                                like caviar and truffle is also a common
+                                culinary circus act. You might see
+                                <a
+                                    href="https://www.forbes.com/sites/carriecoolidge/2020/05/05/vacation-in-hawaii-like-a-homeowner-with-destination-residences-hawaii/?"
+                                    >caviar squeezed into a perfectly good
+                                    burger</a
+                                >
+                                , not because the addition creates a more
+                                harmonious dish, but because its presence allows
+                                the restaurant to double the menu price and
+                                create an Instagram-worthy spectacle. This
+                                treatment reduces these ingredients from their
+                                role as refined flavor elements to the culinary
+                                equivalent of slapping a designer logo onto a
+                                basic t-shirt — what about this is really
+                                <a
+                                    href="https://fearofgod.com/collections/essentials"
+                                    >essential</a
+                                >?
+                            </p>
+                            <p>
+                                Wagyu. The mere mention of it brings people to
+                                salivation. When my friend suggested Jeju Noodle
+                                Bar, a Michelin-starred establishment serving
+                                wagyu ramyun, I jumped at the chance. When the
+                                dish finally arrived, I took a second to to take
+                                it all in. Here was a piping hot bowl of ramyun
+                                with thin slices of wagyu draped neatly on the
+                                top. The broth was undeniably delicious, but the
+                                wagyu...it was almost lost. The fat, which I
+                                expected to melt on my tongue like butter,
+                                simply dissolved into the broth, leaving behind
+                                strips of meat that, while tender, could have
+                                been any decent cut of beef. There was no
+                                distinct wagyu flavor, almost as if the broth
+                                had swallowed it whole. At $45 a bowl, I
+                                couldn't help but feel a twinge of
+                                disappointment. In the future I hope to try a
+                                dish that better showcases what makes wagyu so
+                                special.
+                            </p>
+                            <h3 id="soup-dumplings">Soup dumplings</h3>
+                            <p>
+                                Coming back to Taiwanese food, I wanted to bring
+                                up a debate I had with some friends on whether
+                                xiao long bao (soup dumplings) is another
+                                example of a culinary gimmick or not. The main
+                                point was that (at least in America), you pay a
+                                heavy premium just for getting some soup in your
+                                dumplings.
+                            </p>
+                            <p>
+                                I rarely cook anything grander than the level of
+                                a chipotle bowl, but xiao long bao was something
+                                I've tried making before. Incorporating the
+                                gelatinous soup into the filling isn't too bad,
+                                though it does take some time to prepare. The
+                                trickiest part is carefully folding the dough
+                                and portioning the right amount such that it
+                                didn't fall apart while cooking. Do it once and
+                                you'll understand what I mean. Now do it 50 more
+                                times. I have respect to people who can churn
+                                these out at restaurant scale.
+                            </p>
+                            <p>
+                                In this case I do think the added value is
+                                reflected in the price mark up. The intention
+                                behind adding soup inside a dumpling (as opposed
+                                to something like wonton soup) makes sense. For
+                                most people, meat should be juicy and flavorful.
+                                The soups liquid richness harmonizes well with
+                                the rest of the filling. If anything, soup
+                                dumplings are the opposite of gimmicks; they are
+                                a testament to culinary technique. The careful
+                                construction required to encase a flavorful
+                                broth within a delicate wrapper is far from a
+                                simple trick. While other related dishes such as
+                                baozi share some similarities in their
+                                filling-to-wrapper ratio, none quite replicate
+                                the experience of biting into a soup dumpling.
+                            </p>
+                            <h2 id="concluding-thoughts">
+                                Concluding thoughts
+                            </h2>
+                            <p>
+                                I hope reading this piece makes you take some
+                                time to reflect about various dishes you've
+                                tried and how the ingredients played a role in
+                                your enjoyment of it. As a home cook, I often
+                                enjoy combining various ingredients all
+                                willy-nilly like some mad scientist. This
+                                experience has shown me the value of intentional
+                                ingredient selection, and I plan to apply that
+                                more going forward.
+                            </p>
+                            <p>
+                                As an aside, I was curious to see how Claude
+                                could help me write this post. My biggest
+                                complaint is that it often adds too much
+                                sophistication or vividness, but maybe thats why
+                                I'm not a writing major :P When prompted to tone
+                                it down, it kind of over corrects and then
+                                writes in a very cringe manner. Maybe in the
+                                future I can just feed it old writing examples
+                                and it will be more authentic.
+                            </p>
+                            <p>
+                                My workflow was repeatedly writing and asking
+                                Claude for improvements.I think this approach
+                                helps deal with writers block and getting ideas
+                                out faster while still retaining control over
+                                the style.
+                            </p>
+                            <p>
+                                Finally, I plan to keep writing on various
+                                random topics so stay tuned for more 👀
+                            </p>
+
+                            <!-- Add more paragraphs as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Research Content -->
+            <div id="research" class="content-section py-5">
+                <div class="container">
+                    <h2 class="display-5 mb-5">Selected Publications</h2>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="card publication-card shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h4">Publication Title 1</h3>
+                                    <p class="text-muted">
+                                        Authors, Conference/Journal, Year
+                                    </p>
+                                    <p>
+                                        Brief description of the publication and
+                                        its contributions.
+                                    </p>
+                                    <a
+                                        href="#"
+                                        class="btn btn-outline-primary btn-sm"
+                                        >Read Paper</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const navLinks = document.querySelectorAll(".nav-link");
+                    const contentSections =
+                        document.querySelectorAll(".content-section");
+
+                    navLinks.forEach((link) => {
+                        link.addEventListener("click", function (e) {
+                            e.preventDefault();
+
+                            // Remove active class from all links
+                            navLinks.forEach((link) =>
+                                link.classList.remove("active"),
+                            );
+
+                            // Add active class to clicked link
+                            this.classList.add("active");
+
+                            // Hide all content sections
+                            contentSections.forEach((section) => {
+                                section.style.display = "none";
+                            });
+
+                            // Show the selected content section
+                            const sectionId = this.getAttribute("data-section");
+                            const selectedSection =
+                                document.getElementById(sectionId);
+                            selectedSection.style.display = "block";
+                            setTimeout(() => {
+                                selectedSection.classList.add("active");
+                            }, 10);
+                        });
+                    });
+                });
+                const readMoreButtons =
+                    document.querySelectorAll(".read-more-btn");
+                const backButtons = document.querySelectorAll(".back-to-blog");
+                const blogPreviews = document.getElementById("blog-previews");
+                const blogPosts = document.getElementById("blog-posts");
+
+                readMoreButtons.forEach((button) => {
+                    button.addEventListener("click", function () {
+                        const postId = this.getAttribute("data-post-id");
+                        const postElement = document.getElementById(
+                            "post-" + postId,
+                        );
+
+                        // Hide previews and show posts container
+                        blogPreviews.style.display = "none";
+                        blogPosts.style.display = "block";
+
+                        // Show the specific post
+                        document
+                            .querySelectorAll(".blog-post")
+                            .forEach((post) => {
+                                post.style.display = "none";
+                            });
+                        postElement.style.display = "block";
+                    });
+                });
+
+                backButtons.forEach((button) => {
+                    button.addEventListener("click", function () {
+                        // Hide posts and show previews
+                        blogPosts.style.display = "none";
+                        blogPreviews.style.display = "block";
+                    });
+                });
+            </script>
+        </div>
+        <!-- Publications Page Content (publications.html) -->
+    </body>
 </html>
-
