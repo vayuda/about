@@ -19,265 +19,7 @@
         <!-- MathJax -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
         <!-- Custom CSS -->
-        <style>
-            :root {
-                --dark: #3c2f2f;
-                --red: #854442;
-                --coffee: #6f4436;
-                --mocha: #be9b7b;
-                --beige: #faf0dc;
-                --milk: #fffdf6;
-            }
-            /* Mobile-specific adjustments */
-            /* tablet */
-            @media (max-width: 768px) {
-                /* Adjust navbar text */
-                .navbar-brand {
-                    font-size: 20px;
-                }
-
-                .nav-link {
-                    font-size: 16px;
-                }
-
-                /* Adjust main content text */
-                p {
-                    font-size: 1rem !important; /* Override any other font sizes */
-                }
-
-                /* Adjust email text */
-                span[style*="font-size: 20px"] {
-                    font-size: 16px !important;
-                }
-
-                /* Adjust headings */
-                h1 {
-                    font-size: 1.8rem !important;
-                }
-
-                h2 {
-                    font-size: 1.5rem !important;
-                }
-
-                h3 {
-                    font-size: 1.2rem !important;
-                }
-                .social-link {
-                    font-size: 14px;
-                }
-
-                .social-link img,
-                .social-link .material-icons {
-                    width: 16px;
-                    height: 16px;
-                    font-size: 16px;
-                }
-            }
-            /* phones */
-            @media (max-width: 480px) {
-                .navbar-brand {
-                    font-size: 18px;
-                }
-
-                .nav-link {
-                    font-size: 14px;
-                }
-
-                p {
-                    font-size: 0.9rem !important;
-                }
-
-                span[style*="font-size: 20px"] {
-                    font-size: 14px !important;
-                }
-            }
-            body {
-                font-family:
-                    "Times New Roman",
-                    -apple-system,
-                    "Segoe UI",
-                    sans-serif;
-                background-color: var(--beige);
-                color: var(--dark);
-            }
-
-            h1,
-            h2,
-            h3,
-            .special-heading {
-                color: var(--red);
-            }
-
-            a {
-                color: var(--red);
-            }
-
-            a:hover {
-                color: var(--coffee);
-            }
-
-            .navbar {
-                background-color: var(--mocha) !important;
-                font-size: 20px;
-            }
-
-            .navbar-brand {
-                color: var(--dark) !important;
-                font-weight: bold;
-            }
-
-            .nav-link {
-                color: var(--dark) !important;
-            }
-
-            .nav-link:hover {
-                background: var(--beige) !important;
-            }
-
-            .nav-link.active {
-                border-bottom: 2px solid var(--coffee);
-            }
-
-            .content-section {
-                background: var(--beige);
-                display: none;
-            }
-
-            .content-section.active {
-                display: block;
-            }
-
-            .blog-card {
-                transition: transform 0.2s;
-                background: var(--milk);
-            }
-
-            .blog-card:hover {
-                transform: translateY(-5px);
-            }
-
-            .blog-post {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-
-            .post-content {
-                font-size: 1.1rem;
-                line-height: 1.8;
-            }
-            .social-links {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                margin-top: 15px;
-            }
-
-            .social-link {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                text-decoration: none;
-                color: var(--dark);
-                transition: all 0.2s ease;
-                font-size: 16px;
-            }
-
-            .social-link:hover {
-                color: var(--coffee);
-                transform: translateX(5px);
-            }
-
-            .social-link img {
-                width: 20px;
-                height: 20px;
-                object-fit: contain;
-            }
-
-            .social-link .material-icons {
-                font-size: 20px;
-            }
-
-            blockquote {
-                margin: 2rem 0;
-                padding: 1.5rem 2rem;
-                background-color: var(--milk);
-                border-left: 5px solid var(--mocha);
-                border-radius: 4px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                font-style: italic;
-            }
-
-            blockquote p {
-                margin: 0;
-                color: var(--coffee);
-                font-size: 1.1rem;
-                line-height: 1.6;
-            }
-
-            .back-to-blog {
-                font-size: 1.1rem;
-            }
-            /* Primary buttons */
-            .btn-primary {
-                background-color: var(--coffee) !important;
-                border-color: var(--coffee) !important;
-                color: var(--beige) !important;
-            }
-
-            .btn-primary:hover {
-                background-color: var(--dark) !important;
-                border-color: var(--dark) !important;
-            }
-
-            /* Outline primary buttons */
-            .btn-outline-primary {
-                color: var(--coffee) !important;
-                border-color: var(--coffee) !important;
-                background-color: transparent !important;
-            }
-
-            .btn-outline-primary:hover {
-                color: var(--beige) !important;
-                background-color: var(--coffee) !important;
-            }
-
-            /* Secondary buttons */
-            .btn-secondary {
-                background-color: var(--mocha) !important;
-                border-color: var(--mocha) !important;
-                color: var(--beige) !important;
-            }
-
-            .btn-secondary:hover {
-                background-color: var(--coffee) !important;
-                border-color: var(--coffee) !important;
-            }
-
-            /* Outline secondary buttons */
-            .btn-outline-secondary {
-                color: var(--mocha) !important;
-                border-color: var(--mocha) !important;
-                background-color: transparent !important;
-            }
-
-            .btn-outline-secondary:hover {
-                color: var(--beige) !important;
-                background-color: var(--mocha) !important;
-            }
-
-            /* Add some padding and rounded corners to all buttons */
-            .btn {
-                padding: 0.375rem 1rem;
-                border-radius: 0.25rem;
-                transition: all 0.2s ease-in-out;
-            }
-
-            /* Small buttons */
-            .btn-sm {
-                padding: 0.25rem 0.5rem;
-                font-size: 0.875rem;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <!-- Navigation -->
@@ -337,48 +79,49 @@
                         <div class="col-lg-2"></div>
                         <!-- Main content -->
                         <div class="col-12 col-md-10 col-lg-8 mx-auto">
-                            <div class="row align-items-center">
-                                <!-- Links and photo -->
-                                <div class="col-3">
-                                    <img
-                                        src="images/about.jpg"
-                                        alt="Researcher Photo"
-                                        class="img-fluid rounded-square shadow-sm"
-                                        style="width: 100%"
-                                    />
-                                    <div class="social-links">
-                                        <a
-                                            href="mailto:pjayakumar@ucsd.edu"
-                                            class="social-link"
-                                        >
-                                            <i class="material-icons">email</i>
-                                            <span>pjayakumar@ucsd.edu</span>
-                                        </a>
-                                        <a
-                                            href="https://github.com/vayuda"
-                                            target="_blank"
-                                            class="social-link"
-                                        >
-                                            <img
-                                                src="images/github-mark.png"
-                                                alt="GitHub"
-                                            />
-                                            <span>GitHub</span>
-                                        </a>
-                                        <a
-                                            href="https://x.com/Cr1msonAura"
-                                            target="_blank"
-                                            class="social-link"
-                                        >
-                                            <img
-                                                src="images/xlogo-black.png"
-                                                alt="X"
-                                            />
-                                            <span>Twitter</span>
-                                        </a>
-                                    </div>
+                            <!-- Links and photo -->
+                            <div class="row align-items-center pb-4">
+                                <img
+                                    src="images/about.jpg"
+                                    alt="Researcher Photo"
+                                    class="img-fluid rounded-square shadow-sm"
+                                    style="width: 33%"
+                                />
+
+                                <div class="social-links">
+                                    <a
+                                        href="mailto:pjayakumar@ucsd.edu"
+                                        class="social-link"
+                                    >
+                                        <i class="material-icons">email</i>
+                                        <span>pjayakumar@ucsd.edu</span>
+                                    </a>
+                                    <a
+                                        href="https://github.com/vayuda"
+                                        target="_blank"
+                                        class="social-link"
+                                    >
+                                        <img
+                                            src="images/github-mark.png"
+                                            alt="GitHub"
+                                        />
+                                        <span>GitHub</span>
+                                    </a>
+                                    <a
+                                        href="https://x.com/Cr1msonAura"
+                                        target="_blank"
+                                        class="social-link"
+                                    >
+                                        <img
+                                            src="images/xlogo-black.png"
+                                            alt="X"
+                                        />
+                                        <span>Twitter/X</span>
+                                    </a>
                                 </div>
-                                <!-- Personal info -->
+                            </div>
+                            <div class="row align-items-center">
+                                <!-- Bio -->
                                 <div class="col">
                                     <div class="row">
                                         <p
@@ -399,9 +142,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2">
-                            <!-- right doodles -->
-                        </div>
+                        <!-- right doodles -->
+                        <div class="col-lg-2"/></div>
                     </div>
                 </div>
             </div>
@@ -497,8 +239,13 @@
                                 ingredients used in it.
                             </p>
                             <p>
-                                A quote from Zhendong&#39;s 2024 year in review
-                                prompted me to think about this topic:
+                                A quote from
+                                <a
+                                    href="https://zhengdongwang.com/2024/12/29/2024-letter.html"
+                                >
+                                    Zhendong's 2024 year in review</a
+                                >
+                                prompted me to think more about this:
                             </p>
                             <blockquote>
                                 <p>
@@ -888,137 +635,7 @@
                     </div>
                 </div>
             </div>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    // Existing navigation code
-                    const navLinks = document.querySelectorAll(".nav-link");
-                    const contentSections =
-                        document.querySelectorAll(".content-section");
-
-                    navLinks.forEach((link) => {
-                        link.addEventListener("click", function (e) {
-                            e.preventDefault();
-                            const sectionId = this.getAttribute("data-section");
-                            if (sectionId === "blog") {
-                                // Always show blog previews when clicking the blog nav link
-                                showBlogPreviews();
-                            }
-                            navigateToSection(sectionId);
-                        });
-                    });
-
-                    const readMoreButtons =
-                        document.querySelectorAll(".read-more-btn");
-                    const backButtons =
-                        document.querySelectorAll(".back-to-blog");
-                    const blogPreviews =
-                        document.getElementById("blog-previews");
-                    const blogPosts = document.getElementById("blog-posts");
-
-                    readMoreButtons.forEach((button) => {
-                        button.addEventListener("click", function () {
-                            const postId = this.getAttribute("data-post-id");
-                            showBlogPost(postId);
-                            // Update URL when showing a blog post
-                            history.pushState(
-                                { type: "post", id: postId },
-                                "",
-                                `?post=${postId}`,
-                            );
-                        });
-                    });
-
-                    backButtons.forEach((button) => {
-                        button.addEventListener("click", function () {
-                            showBlogPreviews();
-                            // Update URL when going back to blog list
-                            history.pushState(
-                                { type: "section", id: "blog" },
-                                "",
-                                "?section=blog",
-                            );
-                        });
-                    });
-
-                    // Handle browser back/forward buttons
-                    window.addEventListener("popstate", function (e) {
-                        if (e.state) {
-                            if (e.state.type === "post") {
-                                showBlogPost(e.state.id);
-                            } else if (e.state.type === "section") {
-                                navigateToSection(e.state.id);
-                                if (e.state.id === "blog") {
-                                    showBlogPreviews();
-                                }
-                            }
-                        }
-                    });
-
-                    // Check URL on page load
-                    const urlParams = new URLSearchParams(
-                        window.location.search,
-                    );
-                    if (urlParams.has("post")) {
-                        const postId = urlParams.get("post");
-                        navigateToSection("blog");
-                        showBlogPost(postId);
-                    } else if (urlParams.has("section")) {
-                        navigateToSection(urlParams.get("section"));
-                    }
-
-                    function navigateToSection(sectionId) {
-                        // Remove active class from all links
-                        navLinks.forEach((link) =>
-                            link.classList.remove("active"),
-                        );
-
-                        // Add active class to corresponding link
-                        document
-                            .querySelector(`[data-section="${sectionId}"]`)
-                            .classList.add("active");
-
-                        // Hide all content sections
-                        contentSections.forEach((section) => {
-                            section.style.display = "none";
-                        });
-
-                        // Show the selected content section
-                        const selectedSection =
-                            document.getElementById(sectionId);
-                        selectedSection.style.display = "block";
-                        setTimeout(() => {
-                            selectedSection.classList.add("active");
-                        }, 10);
-
-                        // Update URL for section changes
-                        if (!urlParams.has("post")) {
-                            history.pushState(
-                                { type: "section", id: sectionId },
-                                "",
-                                `?section=${sectionId}`,
-                            );
-                        }
-                    }
-
-                    function showBlogPost(postId) {
-                        blogPreviews.style.display = "none";
-                        blogPosts.style.display = "block";
-                        document
-                            .querySelectorAll(".blog-post")
-                            .forEach((post) => {
-                                post.style.display = "none";
-                            });
-                        document.getElementById(
-                            "post-" + postId,
-                        ).style.display = "block";
-                    }
-
-                    function showBlogPreviews() {
-                        blogPosts.style.display = "none";
-                        blogPreviews.style.display = "block";
-                    }
-                });
-            </script>
+            <script src="script.js"></script>
         </div>
         <!-- Publications Page Content (publications.html) -->
     </body>
