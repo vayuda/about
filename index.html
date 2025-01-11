@@ -28,6 +28,40 @@
                 --beige: #faf0dc;
                 --milk: #fffdf6;
             }
+            /* Mobile-specific adjustments */
+            @media (max-width: 768px) {
+                /* Adjust navbar text */
+                .navbar-brand {
+                    font-size: 20px;
+                }
+
+                .nav-link {
+                    font-size: 16px;
+                }
+
+                /* Adjust main content text */
+                p {
+                    font-size: 1rem !important; /* Override any other font sizes */
+                }
+
+                /* Adjust email text */
+                span[style*="font-size: 20px"] {
+                    font-size: 16px !important;
+                }
+
+                /* Adjust headings */
+                h1 {
+                    font-size: 1.8rem !important;
+                }
+
+                h2 {
+                    font-size: 1.5rem !important;
+                }
+
+                h3 {
+                    font-size: 1.2rem !important;
+                }
+            }
 
             body {
                 font-family:
@@ -333,14 +367,22 @@
                                         Posted on January 10, 2025
                                     </p>
                                     <p>
-                                        Every cook, from the home enthusiast to
-                                        the Michelin-starred chef, faces the
-                                        same fundamental question: what
-                                        ingredients do I need to buy?
+                                        I found myself in the produce aisle at
+                                        my local grocery store, perplexed by the
+                                        dizzying array of apples in front of me.
+                                        Gala, Honeycrisp, Granny Smith, and many
+                                        others I've never even heard of. I'd
+                                        love to know what a "Snap Dragon" apple
+                                        tastes like, but the descriptions make
+                                        it seem like just about every apple is
+                                        somewhat sweet, somewhat tangy, and
+                                        somewhat crisp. I couldn't ponder much
+                                        longer because I still had ten other
+                                        items to buy...
                                     </p>
                                     <button
                                         class="btn btn-outline-primary btn-sm read-more-btn"
-                                        data-post-id="japanese-food"
+                                        data-post-id="ingredient-selection"
                                     >
                                         Read More
                                     </button>
@@ -354,7 +396,7 @@
                 <div id="blog-posts" class="container" style="display: none">
                     <!-- Japanese Food Post -->
                     <div
-                        id="post-japanese-food"
+                        id="post-ingredient-selection"
                         class="blog-post"
                         style="display: none color: var(--milk)"
                     >
