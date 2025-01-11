@@ -62,6 +62,16 @@
                 h3 {
                     font-size: 1.2rem !important;
                 }
+                .social-link {
+                    font-size: 14px;
+                }
+
+                .social-link img,
+                .social-link .material-icons {
+                    width: 16px;
+                    height: 16px;
+                    font-size: 16px;
+                }
             }
             /* phones */
             @media (max-width: 480px) {
@@ -154,6 +164,37 @@
             .post-content {
                 font-size: 1.1rem;
                 line-height: 1.8;
+            }
+            .social-links {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 15px;
+            }
+
+            .social-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                text-decoration: none;
+                color: var(--dark);
+                transition: all 0.2s ease;
+                font-size: 16px;
+            }
+
+            .social-link:hover {
+                color: var(--coffee);
+                transform: translateX(5px);
+            }
+
+            .social-link img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+            }
+
+            .social-link .material-icons {
+                font-size: 20px;
             }
 
             blockquote {
@@ -305,37 +346,35 @@
                                         class="img-fluid rounded-square shadow-sm"
                                         style="width: 100%"
                                     />
-                                    <span style="font-size: 20px"
-                                        >pjayakumar@ucsd.edu</span
-                                    >
-                                    <div
-                                        style="
-                                            display: flex;
-                                            align-items: center;
-                                            gap: 10px;
-                                        "
-                                    >
+                                    <div class="social-links">
+                                        <a
+                                            href="mailto:pjayakumar@ucsd.edu"
+                                            class="social-link"
+                                        >
+                                            <i class="material-icons">email</i>
+                                            <span>pjayakumar@ucsd.edu</span>
+                                        </a>
                                         <a
                                             href="https://github.com/vayuda"
                                             target="_blank"
+                                            class="social-link"
                                         >
                                             <img
                                                 src="images/github-mark.png"
                                                 alt="GitHub"
-                                                class="img-fluid"
-                                                style="width: 20px"
                                             />
+                                            <span>GitHub</span>
                                         </a>
                                         <a
                                             href="https://x.com/Cr1msonAura"
                                             target="_blank"
+                                            class="social-link"
                                         >
                                             <img
                                                 src="images/xlogo-black.png"
-                                                alt="GitHub"
-                                                class="img-fluid"
-                                                style="width: 20px"
+                                                alt="X"
                                             />
+                                            <span>Twitter</span>
                                         </a>
                                     </div>
                                 </div>
