@@ -29,6 +29,7 @@
                 --milk: #fffdf6;
             }
             /* Mobile-specific adjustments */
+            /* tablet */
             @media (max-width: 768px) {
                 /* Adjust navbar text */
                 .navbar-brand {
@@ -62,7 +63,24 @@
                     font-size: 1.2rem !important;
                 }
             }
+            /* phones */
+            @media (max-width: 480px) {
+                .navbar-brand {
+                    font-size: 18px;
+                }
 
+                .nav-link {
+                    font-size: 14px;
+                }
+
+                p {
+                    font-size: 0.9rem !important;
+                }
+
+                span[style*="font-size: 20px"] {
+                    font-size: 14px !important;
+                }
+            }
             body {
                 font-family:
                     "Times New Roman",
