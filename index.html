@@ -781,6 +781,10 @@
                         link.addEventListener("click", function (e) {
                             e.preventDefault();
                             const sectionId = this.getAttribute("data-section");
+                            if (sectionId === "blog") {
+                                // Always show blog previews when clicking the blog nav link
+                                showBlogPreviews();
+                            }
                             navigateToSection(sectionId);
                         });
                     });
