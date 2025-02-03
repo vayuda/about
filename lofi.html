@@ -170,14 +170,6 @@
                                                         Export Settings
                                                     </button>
                                                 </div>
-                                                <div class="col-6">
-                                                    <button
-                                                        id="importBtn"
-                                                        class="btn btn-secondary w-100"
-                                                    >
-                                                        Import Settings
-                                                    </button>
-                                                </div>
                                             </div>
                                         </div>
 
@@ -1480,93 +1472,6 @@
                         this.schedulerInterval = null;
                     }
                 }
-                updateUIFromSettings() {
-                    // Update all UI elements to match the imported settings
-                    // main controls
-                    document.getElementById("tempoInput").value =
-                        this.audioSettings.tempo;
-                    document.getElementById("tempoValue").textContent =
-                        this.audioSettings.tempo;
-                    document.getElementById("beatPatternSelect").value =
-                        this.audioSettings.beatPattern;
-                    // synth settings
-                    document.getElementById("keySelect").value =
-                        this.audioSettings.key;
-                    document.getElementById("scaleModeSelect").value =
-                        this.audioSettings.scaleMode;
-                    document.getElementById("lowestOctaveSelect").value =
-                        this.audioSettings.lowestOctave;
-                    document.getElementById("octaveRangeSelect").value =
-                        this.audioSettings.octaveRange;
-                    document.getElementById("osc1WaveformSelect").value =
-                        this.synthSettings.osc1Waveform;
-                    document.getElementById("osc2WaveformSelect").value =
-                        this.synthSettings.osc2Waveform;
-                    document.getElementById("detuneAmount").value =
-                        this.synthSettings.detuneAmount;
-                    document.getElementById("detuneValue").textContent =
-                        this.synthSettings.detuneAmount;
-                    document.getElementById("oscMix").value =
-                        this.synthSettings.oscMix * 100;
-                    document.getElementById("oscMixValue").textContent =
-                        this.synthSettings.oscMix * 100;
-
-                    // rhythm settings
-                    document.getElementById("rhythmDensity").value =
-                        this.melodySettings.rhythmDensity * 100;
-                    document.getElementById("densityValue").textContent =
-                        this.melodySettings.rhythmDensity * 100;
-                    document.getElementById("syncopationAmount").value =
-                        this.melodySettings.syncopationAmount * 100;
-                    document.getElementById("syncopationValue").textContent =
-                        this.melodySettings.syncopationAmount * 100;
-                    document.getElementById("noteLength").value =
-                        this.melodySettings.noteLength * 100;
-                    document.getElementById("noteLengthValue").textContent =
-                        this.melodySettings.noteLength.toFixed(2);
-                    document.getElementById("rhythmVariation").value =
-                        this.melodySettings.rhythmVariation * 100;
-                    document.getElementById("variationValue").textContent =
-                        this.melodySettings.rhythmVariation * 100;
-
-                    // drum settings
-                    document.getElementById("drumSwing").value =
-                        this.drumSettings.swing * 100;
-                    document.getElementById("swingValue").textContent =
-                        this.drumSettings.swing * 100;
-                    document.getElementById("drumRandomization").value =
-                        this.drumSettings.randomization * 100;
-                    document.getElementById("randomizationValue").textContent =
-                        this.drumSettings.randomization * 100;
-
-                    // effect settings
-                    document.getElementById("filterSlider").value =
-                        this.effectSettings.filterCutoff;
-                    document.getElementById("filterValue").textContent =
-                        this.effectSettings.filterCutoff;
-                    document.getElementById("staticNoiseLevel").value =
-                        this.effectSettings.staticNoiseLevel;
-                    document.getElementById("staticNoiseValue").textContent =
-                        this.effectSettings.staticNoiseLevel;
-
-                    // volume controls
-                    document.getElementById("synthVolume").value =
-                        this.drumSettings.volumes.synth * 100;
-                    document.getElementById("synthVolumeValue").textContent =
-                        this.drumSettings.volumes.synth * 100;
-                    document.getElementById("kickVolume").value =
-                        this.drumSettings.volumes.kick * 100;
-                    document.getElementById("kickVolumeValue").textContent =
-                        this.drumSettings.volumes.kick * 100;
-                    document.getElementById("snareVolume").value =
-                        this.drumSettings.volumes.snare * 100;
-                    document.getElementById("snareVolumeValue").textContent =
-                        this.drumSettings.volumes.snare * 100;
-                    document.getElementById("hihatVolume").value =
-                        this.drumSettings.volumes.hihat * 100;
-                    document.getElementById("hihatVolumeValue").textContent =
-                        this.drumSettings.volumes.hihat * 100;
-                }
                 bindUIEvents() {
                     // Main Controls
                     document
@@ -1598,27 +1503,6 @@
                             a.click();
                             document.body.removeChild(a);
                             URL.revokeObjectURL(url);
-                        });
-
-                    document
-                        .getElementById("importBtn")
-                        .addEventListener("click", () => {
-                            const input = document.createElement("input");
-                            input.type = "file";
-                            input.accept = ".json";
-                            input.onchange = (e) => {
-                                const file = e.target.files[0];
-                                const reader = new FileReader();
-                                reader.onload = (event) => {
-                                    lofiGenerator.importSettings(
-                                        event.target.result,
-                                    );
-                                    // Update UI to reflect imported settings
-                                    this.updateUIFromSettings();
-                                };
-                                reader.readAsText(file);
-                            };
-                            input.click();
                         });
 
                     // Synth Settings
@@ -1839,19 +1723,6 @@
                         effects: this.effectSettings.toJSON(),
                     };
                     return JSON.stringify(settings); // Stringify here, at the final step
-                }
-
-                importSettings(jsonString) {
-                    try {
-                        const settings = JSON.parse(jsonString); // Parse the string to object
-                        this.audioSettings.fromJSON(settings.audio);
-                        this.synthSettings.fromJSON(settings.synth);
-                        this.drumSettings.fromJSON(settings.drums);
-                        this.melodySettings.fromJSON(settings.melody);
-                        this.effectSettings.fromJSON(settings.effects);
-                    } catch (e) {
-                        console.error("Failed to parse settings:", e);
-                    }
                 }
             }
             const lofiGenerator = new LofiGenerator();
